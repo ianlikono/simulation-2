@@ -8,7 +8,7 @@ class Dashboard extends Component {
     !this.props.isLoading && this.props.getHouses();
   }
   render() {
-    const housesDisplay = this.state.houses.map(house => (
+    const housesDisplay = this.props.houses.map(house => (
       <p key={house.house_id}>{house.name}</p>
     ));
     return (
